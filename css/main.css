@@ -98,11 +98,20 @@ textarea {
    ========================================================================== */
 
 /* Commons */
-body {
+body, .non-title-font {
   font-family: 'Lato', sans-serif;
+  color: #333;
 }
 h1, h2, h3, h4, h5, h6, .title-font {
   font-family: 'Medula One', cursive;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -143,7 +152,7 @@ header h1 {
   padding: 0 15px;
 }
 article.container {
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 @media (max-width: 992px) {
@@ -155,18 +164,45 @@ article.container {
     font-size: 1.8em;
   }
   article.container {
-    margin-top: 0;
+    margin-top: 40px;
   }
 }
 
 
 /* Directory */
 
-article > * {
-  padding: 0 15px;
+div#users {
+  margin: 0 15px 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
-
-
+section.user {
+  border-top: 1px solid #aaa;
+  padding: 5px 15px;
+  transition: padding 0.4s;
+  background-color: #f2f2f2;
+  background: linear-gradient(#fff, #f2f2f2);
+}
+section.user.open {
+  padding: 15px 15px;
+}
+section.user:first-child {
+  border: 0;
+}
+section.user h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+section.user h2 a {
+  text-decoration: none;
+}
+.js section.user ul {
+  display: none;
+  margin: 10px 0 0;
+}
+.js section.user.open ul {
+  display: block;
+}
 
 
 
