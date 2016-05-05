@@ -5,7 +5,7 @@ Handlebars.registerHelper('hiddenIfEmpty', function(phone) {
 $(document).ready(function(){
   var template = Handlebars.compile($("#user-template").html());
   var usersElement = $('#users');
-  $.getJSON( "/data/users.json", function( data ) {
+  $.getJSON( "data/users.json", function( data ) {
 
     data.forEach(function(user){
       usersElement.append(template(user));
