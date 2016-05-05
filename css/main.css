@@ -108,7 +108,21 @@ h1, h2, h3, h4, h5, h6, .title-font {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 992px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* Header */
@@ -120,18 +134,37 @@ header {
   top: 0;
   width: 100%;
   box-shadow: 2px 2px 5px #ddd;
+  height: 80px;
 }
 header h1 {
   margin: 0;
   color: white;
   font-size: 3em;
-  height: 80px;
+  padding: 0 15px;
 }
 article.container {
   margin-top: 80px;
 }
 
+@media (max-width: 992px) {
+  header {
+    position: static;
+    height: 40px;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+  article.container {
+    margin-top: 0;
+  }
+}
 
+
+/* Directory */
+
+article > * {
+  padding: 0 15px;
+}
 
 
 
