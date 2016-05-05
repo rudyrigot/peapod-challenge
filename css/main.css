@@ -12,6 +12,8 @@
 
 html {
     /* color: #222; */
+    margin: 0;
+    padding: 0;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -95,9 +97,39 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Commons */
+body {
+  font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .title-font {
+  font-family: 'Medula One', cursive;
+}
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-
+/* Header */
+header {
+  background-color: #7DB041;
+  background: linear-gradient(#7DB041, #4B7B13);
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 2px 2px 5px #ddd;
+}
+header h1 {
+  margin: 0;
+  color: white;
+  font-size: 3em;
+  height: 80px;
+}
+article.container {
+  margin-top: 80px;
+}
 
 
 
