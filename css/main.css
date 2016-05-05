@@ -196,9 +196,19 @@ section.user h2 {
 section.user h2 a {
   text-decoration: none;
 }
+section.user ul {
+  margin: 10px 0 0;
+}
+section.user ul li {
+  margin: 5px 0 0;
+}
+section.user ul .fa-bullet {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 3px;
+}
 .js section.user ul {
   display: none;
-  margin: 10px 0 0;
 }
 .js section.user.open ul {
   display: block;
