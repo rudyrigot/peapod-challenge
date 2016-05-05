@@ -32,44 +32,30 @@
         </header>
 
         <article class="container">
-
           <div id="users">
-
-            <section class="user">
-              <h2 class="non-title-font"><a href="#" data-toggle="#user-1">User Name - hello@hello.com &nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i></a></h2>
-              <ul id="user-1">
-                <li class="username">hello</li>
-                <li class="email"><a href="mailto:hello@hello.com">hello@hello.com</a></li>
-                <li class="address">
-                  98 Battery Street #402<br>
-                  San Francisco, CA 94122
-                </li>
-                <li class="phone"><a href="tel:415-555-5555">415-555-5555</a></li>
-                <li class="website"><a href="http://" target="_blank">http://</a></li>
-              </ul>
-            </section>
-
-            <section class="user">
-              <h2 class="non-title-font"><a href="#" data-toggle="#user-2">User Name - hello@hello.com &nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i></a></h2>
-              <ul id="user-2">
-                <li class="username">hello</li>
-                <li class="email"><a href="mailto:hello@hello.com">hello@hello.com</a></li>
-                <li class="address">
-                  98 Battery Street #402<br>
-                  San Francisco, CA 94122
-                </li>
-                <li class="phone"><a href="tel:415-555-5555">415-555-5555</a></li>
-                <li class="website"><a href="http://" target="_blank">http://</a></li>
-              </ul>
-            </section>
-
           </div>
-
         </article>
+
+        <script id="user-template" type="text/x-handlebars-template">
+          <section class="user">
+            <h2 class="non-title-font"><a href="#" data-toggle="#user-{{id}}">{{name}} - {{email}} &nbsp;&nbsp;<i class="fa fa-phone {{hiddenIfEmpty phone}}" aria-hidden="true"></i></a></h2>
+            <ul id="user-{{id}}">
+              <li class="username"><strong>Username:</strong> {{username}}</li>
+              <li class="email"><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></li>
+              <li class="address">
+                {{address.street}} {{address.suite}}<br>
+                {{address.city}} {{address.zipcode}}
+              </li>
+              <li class="phone"><strong>Phone:</strong> <a href="tel:{{phone}}">{{phone}}</a></li>
+              <li class="website"><strong>Website:</strong> <a href="http://{{website}}" target="_blank">http://{{website}}</a></li>
+            </ul>
+          </section>
+        </script>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script src="js/vendor/handlebars-v4.0.5.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
